@@ -1,0 +1,112 @@
+.container {
+    position: relative;
+}
+
+.container,video {
+    height: 100%;
+    width: 100%;
+}
+
+video {
+    position: absolute;
+}
+
+.bottom-container {
+    bottom: 50rpx;
+    flex-direction: row;
+    position: absolute;
+    width: 100%;
+}
+
+.bottom-container,.download-container {
+    align-items: center;
+    display: flex;
+    height: 100rpx;
+    justify-content: center;
+}
+
+.download-container {
+    background: #000;
+    border-radius: 50px;
+    color: #fff;
+    flex-direction: column;
+    font-size: 32rpx;
+    font-weight: 700;
+    opacity: .7;
+    width: 70%;
+}
+
+.back {
+    opacity: .7;
+}
+
+.back,.home {
+    background-color: #fff;
+    border-radius: 500px;
+    height: 45px;
+    left: 40rpx;
+    position: absolute;
+    top: 80rpx;
+    width: 45px;
+}
+
+.home {
+    opacity: .8;
+}
+
+.date-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: .9;
+    position: absolute;
+    top: 150rpx;
+    width: 100%;
+}
+
+.time {
+    color: #fff;
+    font-size: 120rpx;
+}
+
+.date {
+    color: #fff;
+    font-size: 40rpx;
+}
+
+.shareContainer {
+    height: 100%;
+    position: relative;
+    width: 20%;
+}
+
+.sharebtnView {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+}
+
+.sharebtnView text {
+    color: #fff;
+    font-size: 25rpx;
+    font-weight: 700;
+    margin-top: 4rpx;
+    text-shadow: 0 0 2px #000;
+}
+
+.shareButton {
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.share {
+    height: 60rpx;
+    width: 60rpx;
+}

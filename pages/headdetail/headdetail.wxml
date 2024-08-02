@@ -1,0 +1,17 @@
+<view class="container">
+    <view class="img-container">
+        <image bindload="bindload" class="photo" mode="widthFix" src="{{imgSrc}}"></image>
+    </view>
+    <view class="bottom-container">
+        <view class="shareContainer">
+            <view class="sharebtnView">
+                <image src="../../images/share.png" style="height: 60rpx;width: 60rpx;"></image>
+                <text>分享</text>
+            </view>
+            <button class="shareButton" openType="share"></button>
+        </view>
+        <view bindtap="downloadTap" class="download-container"> 下载头像 </view>
+    </view>
+    <image bindtap="backTap" class="home" src="../../images/home_head.png" wx:if="{{isShare}}"></image>
+    <image bindtap="backTap" class="back" src="../../images/back_head.png" wx:else></image>
+</view>

@@ -1,0 +1,42 @@
+.tab-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.scroll-body {
+    box-sizing: border-box;
+    height: 94%;
+    padding-top: 10rpx;
+    width: 100%;
+}
+
+.grid-item {
+    float: left;
+    height: 330rpx;
+    margin: 10rpx 0 10rpx 20rpx;
+    width: 46%;
+}
+
+.g {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.g,.photo {
+    height: 100%;
+    width: 100%;
+}
+
+.photo {
+    border-radius: 8px;
+    position: absolute;
+}
+
+.adContainer {
+    float: left;
+    margin-left: 20rpx;
+    width: 95%;
+}

@@ -1,0 +1,22 @@
+<view class="add_container" hidden="{{hideGuide}}">
+    <image src="../../images/star.png" style="height: 45rpx;width: 45rpx;margin-left:30rpx"></image>
+    <text>点击添加到我的小程序，32位好友在用</text>
+</view>
+<ad-custom unitId="adunit-a7b9482c5cf2c026"></ad-custom>
+<view class="tab-container" hidden="{{hideTab}}">
+    <van-tabs bind:change="onChange">
+        <van-tab title="{{item}}" wx:for="{{tabs}}" wx:key="index"></van-tab>
+    </van-tabs>
+</view>
+<scroll-view bindscrolltolower="onScrollToLower" class="scroll-body" enhanced="{{true}}" lowerThreshold="{{100}}" scrollTop="{{scrollTop}}" scrollY="{{true}}" showScrollbar="{{false}}" style="height:{{scrollH}}">
+    <block wx:for="{{avatars}}" wx:key="*this">
+        <view bindtap="preview" class="grid-item" data-url="{{item}}">
+            <view class="g">
+                <image class="photo" mode="aspectFill" src="{{item}}"></image>
+            </view>
+        </view>
+        <view class="adContainer" wx:if="{{index!=0&&(index+1)%4==0}}">
+            <ad unitId="adunit-a7b9482c5cf2c026"></ad>
+        </view>
+    </block>
+</scroll-view>

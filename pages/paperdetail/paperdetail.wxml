@@ -1,0 +1,19 @@
+<view class="container">
+    <image bindload="bindload" class="photo" mode="aspectFill" src="{{imgSrc}}"></image>
+    <view class="date-container">
+        <text class="time">{{time}}</text>
+        <text class="date">{{date}}</text>
+    </view>
+    <view class="bottom-container">
+        <view class="shareContainer">
+            <view class="sharebtnView">
+                <image class="share" src="../../images/share.png"></image>
+                <text>分享</text>
+            </view>
+            <button class="shareButton" openType="share"></button>
+        </view>
+        <view bindtap="downloadTap" class="download-container"> 下载壁纸 </view>
+    </view>
+    <image bindtap="backTap" class="home" src="../../images/home.png" wx:if="{{isShare}}"></image>
+    <image bindtap="backTap" class="back" src="../../images/back.png" wx:else></image>
+</view>

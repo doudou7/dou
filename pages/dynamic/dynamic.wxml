@@ -1,0 +1,56 @@
+<view class="add_container" hidden="{{hideGuide}}">
+    <image src="../../images/star.png" style="height: 45rpx;width: 45rpx;margin-left:30rpx"></image>
+    <text>添加到我的小程序，更新全球动态壁纸</text>
+    <image src="../../images/guide_arrow2.png" style="height: 35rpx;width: 70rpx;margin-left:20rpx;margin-bottom:15rpx"></image>
+    <image bindtap="hideGuideTap" class="img_cancel" src="../../images/cancel.png"></image>
+</view>
+<!-- <ad unitId="adunit-c2bd092dbcbdd7bc"></ad> -->
+<view class="" hidden=""></view>
+<view bindtap="searchTap">
+    <image src="../../images/g001.png" style="height: 220rpx;width: 710rpx;margin-left:20rpx"></image>
+</view>
+<view class="tab-container" hidden="{{tabHidden}}">
+    <view bindtap="searchTap" class="tab-item">
+        <view class="img-container1">
+            <image class="img" src="../../images/item_search2.png"></image>
+        </view>
+        <text>LSP搜索</text>
+    </view>
+    <view bindtap="dayTap" class="tab-item">
+        <view class="img-container2">
+            <image class="img" src="../../images/item_hot.png"></image>
+        </view>
+        <text>小姐姐更新</text>
+    </view>
+    <view bindtap="chaoQingTap" class="tab-item">
+        <view class="img-container3">
+            <image class="img" src="../../images/item_sixty.png"></image>
+        </view>
+        <text>60帧超清</text>
+    </view>
+    <view bindtap="QLTap" class="tab-item">
+        <view class="img-container4">
+            <image class="img" src="../../images/item_couple.png"></image>
+        </view>
+        <text>情侣壁纸</text>
+    </view>
+</view>
+<scroll-view bindrefresherrefresh="refresh" bindscrolltolower="onScrollToLower" class="scroll-body" enhanced="{{true}}" lowerThreshold="{{100}}" refresherEnabled="{{true}}" refresherTriggered="{{refreshStatus}}" scrollTop="{{scrollTop}}" scrollY="{{true}}" showScrollbar="{{false}}" style="height:{{scrollH}}">
+    <block wx:for="{{videos}}" wx:key="vid">
+        <view bindtap="preview" class="grid-item" data-item="{{item}}">
+            <view class="g">
+                <image class="photo" mode="aspectFill" src="{{item.thumb_img}}"></image>
+                <view class="info">
+                    <text class="title">{{item.title}}</text>
+                    <view class="count-container">
+                        <image class="iv" src="../../images/play_num.png"></image>
+                        <text class="count">{{item.play_num}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="adContainer" wx:if="{{index!=0&&(index+1)%6==0}}">
+            <ad adTheme="white" adType="video" unitId="adunit-c2bd092dbcbdd7bc"></ad>
+        </view>
+    </block>
+</scroll-view>

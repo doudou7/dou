@@ -1,0 +1,39 @@
+<ad-custom unitId="adunit-a7b9482c5cf2c026"></ad-custom>
+<view class="tab-container" hidden="{{tabHidden}}">
+    <view bindtap="searchTap" class="tab-item">
+        <view class="img-container1">
+            <image class="img" src="../../images/item_search3.png"></image>
+        </view>
+        <text>搜索</text>
+    </view>
+    <view bindtap="dayTap" class="tab-item">
+        <view class="img-container2">
+            <image class="img" src="../../images/item_daily.png"></image>
+        </view>
+        <text>热榜壁纸</text>
+    </view>
+    <view bindtap="kTap" class="tab-item">
+        <view class="img-container3">
+            <image class="img" src="../../images/item_2k.png"></image>
+        </view>
+        <text>4K超清</text>
+    </view>
+    <view bindtap="headTap" class="tab-item">
+        <view class="img-container4">
+            <image class="img" src="../../images/item_head.png"></image>
+        </view>
+        <text>头像</text>
+    </view>
+</view>
+<scroll-view bindrefresherrefresh="refresh" bindscrolltolower="onScrollToLower" class="scroll-body" enhanced="{{true}}" lowerThreshold="{{100}}" refresherEnabled="{{true}}" refresherTriggered="{{refreshStatus}}" scrollTop="{{scrollTop}}" scrollY="{{true}}" showScrollbar="{{false}}">
+    <block wx:for="{{imgs}}" wx:key="img_id">
+        <view class="grid-item">
+            <view class="g">
+                <image bindtap="preview" class="photo" data-index="{{index}}" mode="aspectFill" src="{{item.thumb_img}}"></image>
+            </view>
+        </view>
+        <view class="adContainer" wx:if="{{index!=0&&(index+1)%6==0}}">
+            <ad unitId="adunit-a7b9482c5cf2c026"></ad>
+        </view>
+    </block>
+</scroll-view>
