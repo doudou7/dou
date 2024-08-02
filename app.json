@@ -1,0 +1,52 @@
+{
+    "pages": [
+        "pages/dynamic/dynamic",
+        "pages/home/home",
+        "pages/head/head",
+        "pages/set/set",
+        "pages/paperdetail/paperdetail",
+        "pages/dynamicdetail/dynamicdetail",
+        "pages/headdetail/headdetail",
+        "pages/searchvideo/searchvideo",
+        "pages/searchimg/searchimg"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "mofangmall",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#999999",
+        "selectedColor": "#000000",
+        "borderStyle": "black",
+        "backgroundColor": "white",
+        "list": [
+            {
+                "pagePath": "pages/dynamic/dynamic",
+                "text": "动态壁纸",
+                "iconPath": "images/nav_dynamic.png",
+                "selectedIconPath": "images/nav_avatar_selected.png"
+            },
+            {
+                "pagePath": "pages/home/home",
+                "text": "4K壁纸",
+                "iconPath": "images/nav_home.png",
+                "selectedIconPath": "images/nav_avatar_selected.png"
+            },
+            {
+                "pagePath": "pages/head/head",
+                "text": "情侣头像",
+                "iconPath": "images/nav_avatar.png",
+                "selectedIconPath": "images/nav_avatar_selected.png"
+            },
+            {
+                "pagePath": "pages/set/set",
+                "text": "二次元60帧",
+                "iconPath": "images/nav_set.png",
+                "selectedIconPath": "images/nav_avatar_selected.png"
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,28 @@
+[is="dist/goods-action-button/index"] {
+    flex: 1;
+}
+
+[is="dist/icon/index"] {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+}
+
+[is="dist/loading/index"] {
+    font-size: 0;
+    line-height: 1;
+}
+
+[is="dist/tab/index"] {
+    flex-shrink: 0;
+    width: 100%;
+}
+
+[is="dist/tabbar-item/index"] {
+    flex: 1;
+}
+
+page {
+    height: 100%;
+    width: 100%;
+}
